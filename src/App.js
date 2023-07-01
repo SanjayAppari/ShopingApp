@@ -17,7 +17,7 @@ function App() {
               <Navbar/>
               <Routes>
                  <Route exact path="/" element={<Home/>}/>
-                 <Route exact path="/cart/:id" element={<Cart/>}/>
+                 <Route exact path="/cart" element={<Cart/>}/>
                  <Route exact path="/:name" element={<DisplayItems/>}/>
                  <Route exact path="/openItem/:id" element={<OpenItem/>}/>
               </Routes>

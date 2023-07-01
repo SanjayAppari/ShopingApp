@@ -10,7 +10,7 @@ function Navbar() {
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse ps-4 bg-black" id="navbarSupportedContent">
                         <div className="mx-auto"></div>
                         <ul class="navbar-nav me-5">
                             <li class="nav-item">
@@ -27,7 +27,7 @@ function Navbar() {
                                 </ul>
                             </li>
                             <li>
-                            <Link class="nav-link active" aria-current="page" to="/cart/649d7c1af0695d84b368476c">Cart <i class="fa-solid fa-cart-shopping"></i></Link>
+                            <Link class="nav-link active" aria-current="page" to="/cart">Cart <i class="fa-solid fa-cart-shopping"></i></Link>
                             </li>
                         </ul>
                     </div>

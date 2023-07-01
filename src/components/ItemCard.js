@@ -10,6 +10,7 @@ function ItemCard(props) {
 
  const handleClick=(ele)=>{
     dispatch(setOpenItem(ele));
+    localStorage.setItem('presentItem',JSON.stringify(ele));
     navigate(`/openItem/${ele._id}`);
  }
   return (
