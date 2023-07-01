@@ -41,6 +41,11 @@
   justify-content: center;
   flex-direction: column;
 }
+.displayItems .filter{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
 .displayItems .container{
   display: flex;
   align-items: center;
