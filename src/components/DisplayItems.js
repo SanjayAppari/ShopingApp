@@ -6,7 +6,9 @@ function DisplayItems() {
   const { name } = useParams();
 
   useEffect(() => {
+      if(name=="clothing"){
 
+      }
   }, []);
   return (
     <div className='displayItems' style={{ marginTop: '50px' }}>

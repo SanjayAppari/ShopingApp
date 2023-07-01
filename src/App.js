@@ -4,9 +4,12 @@ import Navbar from './components/Navbar';
 import Home from './components/Home';
 import DisplayItems from './components/DisplayItems';
 import OpenItem from './components/OpenItem';
+import { Provider } from 'react-redux';
+import store from './redux/store'
 
 function App() {
   return (
+    <Provider store={store  }>
     <div className="App">
           {/* <h1>I Love You Amma 🥺</h1> */}
           <Router>
@@ -18,6 +21,7 @@ function App() {
               </Routes>
           </Router>
     </div>
+    </Provider>
   );
 }
 

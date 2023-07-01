@@ -1,0 +1,1 @@
+export const SET_DISPLAY_ITEMS = 'SET_DISPLAY_ITEMS'
