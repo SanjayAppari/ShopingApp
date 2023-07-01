@@ -1,22 +1,26 @@
 import React from 'react'
 import img from '../components/assets/dummy-item-img.jpg'
 import { useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { setOpenItem } from '../redux/actions/action';
 
-function ItemCard() {
+function ItemCard(props) {
     const navigate = useNavigate();
+    const dispatch = useDispatch();
 
- const handleClick=()=>{
-    navigate('/openItem');
+ const handleClick=(ele)=>{
+    dispatch(setOpenItem(ele));
+    navigate(`/openItem/${ele._id}`);
  }
   return (
     
-    <div className='itemCard' onClick={handleClick}>
+    <div className='itemCard' onClick={()=>handleClick(props.ele)}>
         <div className="image">
             <img src={img} alt="" />
         </div>
         <div className="details">
-            <h4>Black Shirt</h4>
-            <h6>₹1233</h6>
+            <h4>{props.title}</h4>
+            <h6>₹{props.price}</h6>
         </div>
     </div>
   )

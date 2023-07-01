@@ -1,13 +1,34 @@
 import React, { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import ItemCard from './ItemCard';
+import { useDispatch, useSelector } from 'react-redux';
+import { setDisplayItems } from '../redux/actions/action';
 
 function DisplayItems() {
   const { name } = useParams();
+  const backendHost = process.env.REACT_APP_BACKEND_HOST;
+
+
+  const dispatch = useDispatch();
+  const state = useSelector(state=>state);
+
+  const fecthAllClothings=async()=>{
+    try {
+      const response = await fetch(`${backendHost}/clothing/getClothings`,{
+        method:'GET',
+      });
+      const json = await response.json();
+      dispatch(setDisplayItems(json));
+    } 
+    catch(err) {
+       console.log(err.message);
+    }
+    
+  };
 
   useEffect(() => {
       if(name=="clothing"){
-
+        fecthAllClothings();
       }
   }, []);
   return (
@@ -36,13 +57,13 @@ function DisplayItems() {
           </li>
       </div>
       <div className="container">
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
-        <ItemCard />
+
+        {
+            state.Items.displayItems.map((ele)=>{
+               return <ItemCard title={ele.title} ele={ele} price={ele.price}/>
+            })
+        }
+
       </div>
     </div>
   )

@@ -1,4 +1,4 @@
-import { SET_DISPLAY_ITEMS } from "./action-types";
+import { SET_DISPLAY_ITEMS, SET_OPEN_ITEM } from "./action-types";
 
 export const setDisplayItems = (Items)=>({
     type: SET_DISPLAY_ITEMS,
@@ -6,3 +6,7 @@ export const setDisplayItems = (Items)=>({
 });
 
 
+export const setOpenItem = (Item)=>({
+    type: SET_OPEN_ITEM,
+    payload: Item
+});
