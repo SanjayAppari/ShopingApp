@@ -10,7 +10,7 @@ function OpenItem() {
     <div  className='openItem container'  style={{marginTop:'50px'}}>
        <div className="openLeft">
           <div className="image">
-            <img src={img} alt="" />
+            <img src={state.Items.openItem.image} alt="" />
           </div>
        </div>
        <div className="openRight">

@@ -6,6 +6,7 @@ import DisplayItems from './components/DisplayItems';
 import OpenItem from './components/OpenItem';
 import { Provider } from 'react-redux';
 import store from './redux/store'
+import Cart from './components/Cart';
 
 function App() {
   return (
@@ -15,9 +16,10 @@ function App() {
           <Router>
               <Navbar/>
               <Routes>
-                 <Route path="/" element={<Home/>}/>
-                 <Route path="/all/:name" element={<DisplayItems/>}/>
-                 <Route path="/openItem/:id" element={<OpenItem/>}/>
+                 <Route exact path="/" element={<Home/>}/>
+                 <Route exact path="/cart/:id" element={<Cart/>}/>
+                 <Route exact path="/:name" element={<DisplayItems/>}/>
+                 <Route exact path="/openItem/:id" element={<OpenItem/>}/>
               </Routes>
           </Router>
     </div>

@@ -17,17 +17,17 @@ function Navbar() {
                                 <Link class="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li class="nav-item dropdown">
-                                <Link class="nav-link active" to="/all/clothing"  aria-expanded="">
+                                <Link class="nav-link active" to="/clothing"  aria-expanded="">
                                     Clothing
                                 </Link>
                                 <ul class="dropdown-menu bg-black ">
-                                    <li><Link class="dropdown-item text-white bg-transparent" to="/">Top Wear</Link></li>
+                                    <li><Link class="dropdown-item text-white bg-transparent" to="/Top Wear">Top Wear</Link></li>
                                     <li><hr class="dropdown-divider text-white" /></li>
-                                    <li><Link class="dropdown-item text-white bg-transparent" to="/">Bottom Wear</Link></li>
+                                    <li><Link class="dropdown-item text-white bg-transparent" to="/Bottom Wear">Bottom Wear</Link></li>
                                 </ul>
                             </li>
                             <li>
-                            <Link class="nav-link active" aria-current="page" to="#">Cart</Link>
+                            <Link class="nav-link active" aria-current="page" to="/cart/649d7c1af0695d84b368476c">Cart <i class="fa-solid fa-cart-shopping"></i></Link>
                             </li>
                         </ul>
                     </div>

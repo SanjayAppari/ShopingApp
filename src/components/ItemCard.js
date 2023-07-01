@@ -16,7 +16,7 @@ function ItemCard(props) {
     
     <div className='itemCard' onClick={()=>handleClick(props.ele)}>
         <div className="image">
-            <img src={img} alt="" />
+            <img src={props.ele.image} alt="" />
         </div>
         <div className="details">
             <h4>{props.title}</h4>
